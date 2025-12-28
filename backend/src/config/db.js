@@ -2,8 +2,15 @@ const initSqlJs = require('sql.js');
 const fs = require('fs');
 const path = require('path');
 
-const dbPath = path.join(__dirname, '..', '..', 'tasks.db');
+// Use persistent volume in production (Railway), local path in development
+const dbDir = process.env.NODE_ENV === 'production' ? '/app/data' : path.join(__dirname, '..', '..');
+const dbPath = path.join(dbDir, 'tasks.db');
 let db = null;
+
+// Ensure data directory exists
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+}
 
 const initDb = async () => {
   if (db) return db;

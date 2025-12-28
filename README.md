@@ -1,6 +1,17 @@
 # Task Manager Application
 
-A modern, full-stack task management application with user authentication, pagination, and Docker support.
+A modern, full-stack task management application with user authentication, pagination, and cloud deployment.
+
+## 🌐 Live Demo
+
+**Frontend:** [https://task-manager-frontend-ec90kpztu-amyasserfs-projects.vercel.app](https://task-manager-frontend-ec90kpztu-amyasserfs-projects.vercel.app)
+
+**Backend API:** [https://task-manager-production-7c7a.up.railway.app](https://task-manager-production-7c7a.up.railway.app/health)
+
+**Deployment:**
+- Frontend: Vercel
+- Backend: Railway
+- Database: SQLite (persistent storage)
 
 ![Task Manager](./screenshots/dashboard.png)
 
@@ -315,8 +326,6 @@ Tests cover:
 
 ## 🐳 Docker Deployment
 
-See [DOCKER.md](./DOCKER.md) for detailed Docker documentation.
-
 **Quick Start:**
 ```bash
 docker-compose up --build
@@ -324,23 +333,23 @@ docker-compose up --build
 
 ## 🚀 Production Deployment
 
-For production deployment to VPS, cloud platforms, or other hosting services, see the comprehensive [DEPLOYMENT.md](./DEPLOYMENT.md) guide.
+This application is deployed on:
 
-**Deployment options covered:**
-- 🐳 **Docker** - Containerized deployment
-- 🖥️ **VPS** - DigitalOcean, AWS EC2, Linode with Nginx + PM2
-- ☁️ **Cloud Platforms** - Vercel, Railway, Render (free tiers available)
-- 🔒 **SSL Setup** - Let's Encrypt and Cloudflare
-- 📊 **Monitoring** - PM2, logging, and uptime monitoring
+**Frontend (Vercel):**
+- URL: https://task-manager-frontend-ec90kpztu-amyasserfs-projects.vercel.app
+- Automatic deployments from GitHub
+- Global CDN distribution
 
-**Quick deployment scripts:**
-```bash
-# Docker deployment
-./deploy-docker.sh
+**Backend (Railway):**
+- URL: https://task-manager-production-7c7a.up.railway.app
+- Automatic deployments from GitHub
+- Persistent SQLite database storage
 
-# VPS deployment (requires sudo)
-sudo ./deploy-vps.sh
-```
+**To deploy your own version:**
+1. **Backend:** Push to GitHub → Deploy on [Railway.app](https://railway.app)
+2. **Frontend:** Push to GitHub → Deploy on [Vercel.com](https://vercel.com)
+3. Set environment variables (see [DEPLOYMENT.md](./DEPLOYMENT.md) for details)
+
 
 
 ## 📝 Assumptions
