@@ -4,7 +4,7 @@ A modern, full-stack task management application with user authentication, pagin
 
 ## 🌐 Live Demo
 
-**Frontend:** [https://task-manager-frontend-ec90kpztu-amyasserfs-projects.vercel.app](https://task-manager-frontend-ec90kpztu-amyasserfs-projects.vercel.app)
+**Frontend:** [https://task-manager-frontend-puce-one.vercel.app/](https://task-manager-frontend-puce-one.vercel.app/)
 
 **Backend API:** [https://task-manager-production-7c7a.up.railway.app](https://task-manager-production-7c7a.up.railway.app/health)
 
